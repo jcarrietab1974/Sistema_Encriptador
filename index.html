@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador / Desencriptador</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+CO&family=Playwrite+CU:wght@100..400&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="ico" sizes="28x28" href="img/Pestaña.ico" />
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="img/Logo.png" alt="Logo de alura" />
+    </header>
+    <main>
+      <section class="encriptar">
+        <textarea
+          class="text-area"
+          cols="30"
+          rows="10"
+          placeholder="Ingrese el texto aqui"
+        ></textarea>
+        <div class="informacion">
+          <img src="img/bi_exclamation-circle-fill.png" alt="" />
+          <h6 class="informacion_h">Solo letras minúsculas y sin acentos</h6>
+        </div>
+        <div class="botones">
+          <button class="btn-encritar" onclick="btnEncriptar()">
+            Encriptar
+          </button>
+          <button class="btn-desencriptar" onclick="btnDesencriptar()">
+            Desencriptar
+          </button>
+        </div>
+      </section>
+      <section class="desencriptar">
+        <div class="desencriptar_div">
+          <textarea class="mensaje" cols="30" rows="10"></textarea>
+          <h3 class="Parrafo">Ningún mensaje fue encontrado</h3>
+          <p class="Parrafo">
+            Ingrese el texto que desea encriptar o desencriptar
+          </p>
+          <div class="botones">
+            <button class="btn-copiar">Copiar</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

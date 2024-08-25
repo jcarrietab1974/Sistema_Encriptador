@@ -1,0 +1,176 @@
+:root {
+  --primary-color: #0a3871;
+  --secondary-color: #d8dfe8;
+  --text-color: #495057;
+  --background-color: #f3f5fc;
+  --font-size-small: 12px;
+  --font-size-medium: 18px;
+  --font-size-large: 24px; /* Ajuste del tamaño para mejorar en dispositivos móviles */
+  --button-width: 100%; /* Hacemos los botones responsivos */
+  --button-height: 50px;
+  --border-radius: 24px;
+}
+
+* {
+  background: var(--background-color);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: var(--font-size-medium);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}*/
+
+.logo {
+  /*max-width: 100px; /* Reducción para mejor ajuste en móviles */
+  /*height: auto;*/
+  width: 120px;
+  height: 48px;
+  margin: 40px 0 0 40px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px; /* Limitar ancho para grandes pantallas */
+  height: 700px;
+}
+
+section {
+  width: 100%; /* Asegura que las secciones ocupen todo el ancho disponible */
+  margin-bottom: 20px;
+}
+
+.text-area,
+.mensaje {
+  width: 90%;
+  border: none;
+  color: var(--primary-color);
+  margin-top: 20px;
+  text-transform: lowercase;
+  font-size: 1rem; /* Uso de unidades relativas para mejorar la escalabilidad */
+  height: 120px; /* Altura fija para asegurar consistencia */
+  padding: 10px;
+  border-radius: var(--border-radius);
+}
+
+::placeholder {
+  color: var(--primary-color);
+}
+
+.text-area:focus,
+.mensaje:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
+.informacion {
+  display: flex;
+  margin-top: 20%;
+  width: 229px;
+  height: 18px;
+}
+
+.informacion_h {
+  color: var(--text-color);
+  font-size: var(--font-size-small);
+  margin-left: 2%;
+}
+
+.botones {
+  display: flex;
+  flex-direction: column; /* Apilamos los botones en columnas para móviles */
+  gap: 10px;
+  width: 90%;
+  margin-top: 10px;
+}
+
+.botones button {
+  width: 100%;
+  height: var(--button-height);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid var(--primary-color);
+  transition: background-color 0.3s ease;
+}
+
+.btn-encritar {
+  background-color: var(--primary-color);
+  color: #e9ecf8;
+}
+
+.btn-desencriptar {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.btn-encritar:hover,
+.btn-desencriptar:hover,
+.btn-copiar:hover {
+  background-color: var(--primary-color);
+  color: #e9ecf8;
+}
+
+.mensaje {
+  background: white url("img/Muñeco.png") no-repeat center;
+  background-size: contain; /* Ajustamos la imagen al contenedor */
+}
+
+.btn-copiar {
+  margin-top: 10px;
+  /*width: 100%;*/
+  height: var(--button-height);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid var(--primary-color);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+h3,
+p {
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  margin-top: 14%;
+}
+
+p {
+  font-size: var(--font-size-small);
+}
+
+@media (min-width: 768px) {
+  main {
+    flex-direction: row; /* Cambiamos a disposición de columnas para pantallas más grandes */
+    align-items: flex-start;
+  }
+
+  .botones {
+    flex-direction: row;
+    gap: 30px; /* Espaciado adecuado entre botones en pantallas más grandes */
+  }
+
+  .text-area,
+  .mensaje {
+    font-size: var(
+      --font-size-large
+    ); /* Aumentamos el tamaño del texto en pantallas más grandes */
+    height: 200px; /* Ajustamos la altura de los elementos en pantallas más grandes */
+  }
+}
